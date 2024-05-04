@@ -1,3 +1,5 @@
+import java.time.Year;
+
 public class Employee {
     String name;
     int salary, workHours, hireYear;
@@ -24,7 +26,7 @@ public class Employee {
     }
 
     float salaryRaise() {
-        int year = 2024 - hireYear;
+        int year = Year.now().getValue() - hireYear;
         float raise = 0;
 
         if (year < 10 ) {
