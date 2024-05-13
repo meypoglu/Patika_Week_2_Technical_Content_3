@@ -1,5 +1,5 @@
-public class Main {
-    public static void main(String[] args) {
+public class StudentInfoSystem {
+    public static void StudentInfoSystem(String[] args) {
 
         Course mat = new Course("Matematik", "MAT101", "MAT", 30);
         Course fizik = new Course("Fizik", "FZK101", "FZK", 20);
