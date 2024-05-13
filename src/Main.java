@@ -1,15 +1,29 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        Course mat = new Course("Matematik", "MAT101", "MAT", 30);
+        Course fizik = new Course("Fizik", "FZK101", "FZK", 20);
+        Course kimya = new Course("Kimya", "KMY101", "KMY", 10);
+
+        Teacher t1 = new Teacher("Mahmut Hoca", "90550000000", "MAT");
+        Teacher t2 = new Teacher("Fatma Ayşe", "90550000001", "FZK");
+        Teacher t3 = new Teacher("Ali Veli", "90550000002", "KMY");
+
+        mat.addTeacher(t1);
+        fizik.addTeacher(t2);
+        kimya.addTeacher(t3);
+
+        Student s1 = new Student("İnek Şaban", 4, "140144015", mat, fizik, kimya);
+        s1.addBulkExamNote(50,20,40);
+        s1.isPass();
+
+        Student s2 = new Student("Güdük Necmi", 4, "2211133", mat, fizik, kimya);
+        s2.addBulkExamNote(100,50,40);
+        s2.isPass();
+
+        Student s3 = new Student("Hayta İsmail", 4, "221121312", mat, fizik, kimya);
+        s3.addBulkExamNote(50,20,40);
+        s3.isPass();
+
     }
 }
